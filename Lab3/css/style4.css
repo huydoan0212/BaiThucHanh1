@@ -1,0 +1,313 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+#container {
+    position: relative;
+}
+
+#display {
+    position: absolute;
+    left: 45px;
+    border: 10px solid #e3e3e3;
+    top: 20px;
+    left: calc((50% - 175px));
+    width: 330px;
+    height: 380px;
+
+}
+
+#account {
+    width: 200px;
+    height: 100px;
+}
+
+#display .text-title {
+    float: left;
+    width: 100%;
+    margin-left: 23px;
+    color: #87d630;
+    font-weight: bold;
+    font-size: 8px;
+}
+
+#display #account .row {
+    float: left;
+    width: 400px;
+    height: 35px;
+    position: relative;
+}
+
+#account .row > input {
+    width: 231px;
+    height: 25px;
+    border: 1px solid #e6e6e6;
+    padding-left: 50px;
+    font-size: 16px;
+    margin-left: 23px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+
+
+}
+
+#account .row > input::placeholder {
+    padding: 10px;
+    font-size: 8px;
+    position: absolute;
+    left: 40px;
+    top: -1px;
+    color: #cacaca;
+}
+
+#account .row > i {
+    position: absolute;
+    left: 37px;
+    top: 9px;
+    width: 10px;
+    height: 10px;
+    color: #b9b9b9;
+
+
+}
+
+#account .row > i::after {
+    content: "";
+    border-right: 1px solid #e6e6e6;
+    margin-left: 13px;
+}
+
+#account .row .fa-user::after {
+    content: "";
+    border-right: 1px solid #e6e6e6;
+    margin-left: 14px;
+}
+
+#date-of-birth {
+    display: inline-block;
+    width: 164px;
+}
+
+#date-of-birth .text-title > p {
+    width: 52px;
+}
+
+#date-of-birth .row-dob {
+    float: left;
+    margin-left: 23px;
+}
+
+#date-of-birth .row-dob > input {
+    width: 35px;
+    height: 25px;
+    position: relative;
+    background-color: #f9f9f9;
+    border: 1px solid #ebebeb;
+}
+
+#date-of-birth .row-dob > input::placeholder {
+    font-size: 8px;
+    padding-left: 10px;
+    position: absolute;
+    top: 9px;
+    color: #cacaca;
+
+}
+
+#date-of-birth .row-dob .year {
+    width: 44px;
+
+}
+
+#gender {
+    display: inline-block;
+    float: right;
+    margin-right: 23px;
+    width: 143px;
+    position: relative;
+}
+
+#gender .text-title {
+    padding: 0;
+    margin: 0;
+}
+
+#gender .row-gender > input {
+    width: 67px;
+    height: 25px;
+    background-color: #f9f9f9;
+    border: 1px solid #ebebeb;
+    display: inline-block;
+}
+
+#gender .row-gender .female {
+    position: absolute;
+    left: 72px;
+
+}
+
+#gender .row-gender > input::placeholder {
+    font-size: 8px;
+    padding-left: 21px;
+    position: absolute;
+    top: 9px;
+    color: #cacaca;
+}
+
+#gender .row-gender .male::placeholder {
+    padding-left: 24px;
+}
+
+#payment-details > button {
+    width: 142px;
+    height: 28px;
+    background-color: #f9f9f9;
+    border: 1px solid #ebebeb;
+    font-size: 8px;
+    color: #cacaca;
+}
+
+#payment-details > button:hover {
+    background-color: #7ed321;
+    color: white;
+}
+
+#payment-details .paypal-btn {
+    float: right;
+    margin-right: 23px;
+}
+
+#payment-details .credit-card-btn {
+    float: left;
+    margin-left: 23px;
+}
+
+#payment-details .row-card-number {
+    position: relative;
+    width: 50px;
+    margin: 0 23px;
+}
+
+#payment-details .row-card-number > input {
+    width: 279px;
+    height: 28px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ebebeb;
+
+}
+
+#payment-details .row-card-number > input::placeholder {
+    font-size: 8px;
+    position: absolute;
+    top: 12px;
+    left: 52px;
+    color: #cacaca;
+
+}
+
+#payment-details .row-card-number > i {
+    position: absolute;
+    top: 75px;
+    left: 13px;
+    color: #cacaca;
+}
+
+#payment-details .row-card-number > i::after {
+    content: "";
+    border-right: 1px solid #ebebeb;
+    padding-left: 11px;
+}
+
+#payment-details .card-cvc {
+    display: inline-block;
+    float: left;
+    width: 100px;
+    margin-left: 23px;
+    position: relative;
+}
+
+#payment-details .card-cvc > i {
+    position: absolute;
+    top: 19px;
+    left: 14px;
+    color: #b9b9b9;
+}
+
+#payment-details .card-cvc > input {
+    width: 132px;
+    height: 26px;
+    border: 1px solid #ebebeb;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+}
+
+#payment-details .card-cvc > input::placeholder {
+    font-size: 8px;
+    color: #cacaca;
+    position: absolute;
+    top: 11px;
+    left: 53px;
+}
+
+
+#payment-details .card-cvc > i::after {
+    content: "";
+    border-right: 1px solid #ebebeb;
+    padding-left: 13px;
+}
+
+#payment-details .select-items {
+    float: right;
+    display: inline-block;
+    margin-right: 26px;
+    position: relative;
+    width: 139px;
+}
+
+#payment-details .select-items > select {
+    width: 72px;
+    height: 29px;
+    margin-top: 10px;
+    font-size: 8px;
+    color: #cacaca;
+    border: 1px solid #ebebeb;
+    background-color: #f9f9f9;
+}
+
+#payment-details .select-items #year {
+    position: absolute;
+    left: 70px;
+}
+
+#message {
+    width: 330px;
+
+}
+
+#message .accept {
+    margin-left: 23px;
+    margin-right: 26px;
+    font-size: 8px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+#message .accept > input {
+    position: absolute;
+    top: 51px;
+    left: -14px;
+    display: inline-block;
+    width: 10px;
+    width: 10px;
+}
+
+#message .accept > p {
+    position: absolute;
+    top: 47px;
+    left: 8px;
+}

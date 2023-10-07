@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+#container {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    border: 10px solid #e6e6e6;
+}
+
+#container .title-contact > p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #343431;
+}
+#container form {
+
+}
+
+#container form > input {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 50px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #f1f1f1;
+
+}
+#container form > input::placeholder {
+    padding-left: 5px;
+}
+
+#container form > select{
+    display: block;
+    margin: auto;
+    width: 405px;
+    height: 50px;
+    margin-bottom: 20px;
+
+
+}
+#container form > textarea {
+    display: block;
+    flex-basis: 100%;
+    margin: auto;
+    width: 400px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+#container #email {
+    display: inline-block;
+    width: 190px;
+    margin: 0;
+    margin-bottom: 20px;
+    float: right;
+    margin-right: 47px;
+}
+#container #phone {
+    display: inline-block;
+    width: 190px;
+    margin: 0;
+    margin-bottom: 20px;
+    float: left;
+    margin-left: 47px;
+}
+
+#container .group-btn {
+    position: relative;
+}
+#container #submit {
+    width: 410px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+}
+
+#container .group-btn > i {
+    position: absolute;
+    top: 14.5px;
+    left: 275px;
+    color: white;
+}
