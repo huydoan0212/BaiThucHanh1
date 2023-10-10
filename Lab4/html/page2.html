@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style2.css">
+    <script src="https://kit.fontawesome.com/3e135170bd.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <title>Page 2</title>
+
+
+</head>
+<body>
+<div id="main">
+    <div id="container">
+        <div class="title-contact">
+            <p>Contact Us</p>
+        </div>
+        <form action="" class="information-form">
+            <input type="text" placeholder="Enter Your Name" class="input-form" id="name">
+            <input type="text" placeholder="Enter Your Email" class="input-form" id="email">
+            <input type="text" placeholder="Enter Number Phone" class="input-form" id="phone">
+            <select name="" id="needed" class="needed-servive" place>
+                <option value="" selected>Please Choose</option>
+                <option value="1" class="option-need">Nha Trang</option>
+                <option value="2" class="option-need">Sài Gòn</option>
+                <option value="3" class="option-need">Đồng Nai</option>
+            </select>
+            <textarea name="" placeholder="Your message here" id="message" cols="30" rows="10"></textarea>
+            <div class="group-btn">
+                <button id="submit">Submit</button>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    $(document).ready(setInterval(function () {
+        $("#name").on('input', function () {
+            if (!(/[a-zA-Z]/.test($(this).val()) && /\d/.test($(this).val()))) {
+                $(this).css("border", "2px solid red")
+
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+
+            }
+        });
+
+        $("#email").on('input', function () {
+            function isValidEmail(email) {
+                return email.includes("@");
+            }
+
+            if (!isValidEmail($(this).val())) {
+                $(this).css("border", "2px solid red")
+
+
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+
+            }
+        });
+
+        $("#phone").on('input', function () {
+            if (!(/^\d+$/.test($(this).val()))) {
+                $(this).css("border", "2px solid red")
+
+
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+
+            }
+        });
+    }), 1);
+
+</script>
+</body>
+</html>

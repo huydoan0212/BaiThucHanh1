@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+
+    <style>
+        .colorButton {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<button class="colorButton" style="background-color: red;"></button>
+<button class="colorButton" style="background-color: blue;"></button>
+<button class="colorButton" style="background-color: green;"></button>
+
+<script>
+    const button = document.getElementsByClassName('colorButton');
+    for (let i = 0; i < button.length; i++) {
+        button[i].addEventListener('click', function (){
+            document.body.style.backgroundColor = button[i].style.backgroundColor;
+        })
+    }
+</script>
+</body>
+</html>

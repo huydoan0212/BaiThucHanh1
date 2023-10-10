@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+#main {
+    background: url("../img/mau-background-dep.jpg");
+    position: relative;
+    height: 900px;
+
+}
+
+#container {
+    position: absolute;
+    top: 50px;
+    left: calc((50% - 200px));
+
+}
+
+#display {
+    width: 450px;
+    height: 750px;
+    margin: auto;
+    background-color: #ffffff;
+    text-align: center;
+    position: relative;
+    border-radius: 10px;
+}
+
+#display .title {
+    position: absolute;
+    left: calc((50% - 45px));
+    top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+#display form > input {
+    width: 340px;
+    height: 60px;
+    position: absolute;
+    left: calc((50% - 170px));
+    border: none;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#display form > input::placeholder {
+    padding: 10px;
+    font-weight: bold;
+    color: black;
+    font-size: 14px;
+}
+
+#display form #email {
+    top: 150px;
+}
+
+#display form #password {
+    top: 240px;
+}
+
+#display #sign-in-btn {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    top: 340px;
+    left: calc((50% - 75px));
+    border: none;
+    border-radius: 20px;
+    background-color: #bd59d7;
+    color: white;
+    font-weight: bold;
+    box-shadow: rgba(189, 89, 215,1) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#display .sub-text {
+    position: absolute;
+    top: 430px;
+    left: calc((50% - 40px));
+    font-size: 14px;
+    color: #bdbdbd;
+}
+
+#display #facebook {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    top: 480px;
+    left: 135px;
+}
+
+
+#display #google {
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    top: 488px;
+    left: 233px;
+
+}
+
+#display .text-bottom {
+    position: absolute;
+    top: 680px;
+    left: calc((50% - 31px));
+    font-size: 16px;
+    color: #90849b;
+    font-weight: 700;
+}

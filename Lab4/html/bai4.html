@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 4</title>
+</head>
+<body>
+<div id="container">
+    <div id="display">
+        <textarea id="text-area" rows="9" cols="70"></textarea>
+        <input type="text" id="text-field" style="display: block">
+        <button id="check" style="display: block; margin-top: 3px">Check</button>
+        <p id="result"></p>
+    </div>
+</div>
+<script>
+    var check = document.getElementById('check');
+    check.addEventListener('click', function () {
+        var textField = document.getElementById('text-field').value;
+        var textArea = document.getElementById('text-area').value;
+        var times =  textArea.split(textField).length - 1;
+        document.getElementById('result').innerText = 'So lan xuat hien la: '+ times;
+
+    } )
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<div id="loi-chao">
+    <p id="text">Hello</p>
+</div>
+<script>
+    var list = ['Xin chào', 'Hello', 'Hi', 'Chào', 'Lâu rồi không gặp'];
+    var randomIndex = Math.floor(Math.random() * list.length);
+    var ramdomList = list[randomIndex];
+    document.getElementById('text').textContent = ramdomList;
+
+</script>
+</body>
+</html>

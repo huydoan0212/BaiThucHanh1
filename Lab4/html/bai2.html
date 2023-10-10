@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+    <style>
+        .input {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="input ">
+        <input type="text" placeholder="Nhập a" class="a" id="input-a">
+        <span>x^2 +</span>
+    </div>
+
+    <div class="input ">
+        <input type="text" placeholder="Nhập b" class="b" id="input-b">
+        <span> x +</span>
+    </div>
+    <div class="input ">
+        <input type="text" placeholder="Nhập c" class="c" id="input-c">
+        <span>= 0</span>
+    </div>
+    <button id="check">Giải</button>
+    <p id="text"></p>
+</div>
+<script>
+    var aInput = document.getElementById('input-a');
+    var bInput = document.getElementById('input-b');
+    var cInput = document.getElementById('input-c');
+    var button = document.getElementById('check');
+    var ketQua = document.getElementById('text');
+
+    button.addEventListener('click', function () {
+        var a = parseFloat(aInput.value);
+        var b = parseFloat(bInput.value);
+        var c = parseFloat(cInput.value);
+
+        var delta = b * b - 4 * a * c;
+
+        if (a == 0) {
+            // Phương trình bậc nhất
+            if (b == 0) {
+                // Phương trình vô nghiệm hoặc vô số nghiệm
+                if (c == 0) {
+                    ketQua.innerText = 'Phương trình có vô số nghiệm.';
+                } else {
+                    ketQua.innerText = 'Phương trình vô nghiệm.';
+                }
+            } else {
+                // Phương trình có một nghiệm duy nhất
+                var x = -c / b;
+                ketQua.innerText = 'Phương trình có một nghiệm duy nhất: x = ' + x;
+            }
+        } else {
+            if (delta < 0) {
+                ketQua.innerText = 'Phương trình vô nghiệm.';
+            } else if (delta == 0) {
+                var x = -b / (2 * a);
+                ketQua.innerText = 'Phương trình có nghiệm kép: x1 = x2 = ' + x;
+            } else {
+                var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                ketQua.innerText = 'Phương trình có 2 nghiệm x1 = ' + x1 + ', x2 = ' + x2
+            }
+        }
+    })
+
+
+</script>
+
+</body>
+</html>

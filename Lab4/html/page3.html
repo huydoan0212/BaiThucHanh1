@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 3</title>
+    <link rel="stylesheet" href="../css/style3.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="container">
+            <div id="display">
+                <div class="title">
+                    <p>Sign In</p>
+                </div>
+                <form action="">
+                    <input type="text" placeholder="username or email" id="email">
+                    <input type="password" placeholder="password" id="password">
+                    <button id="sign-in-btn">SIGN IN</button>
+                </form>
+                <div class="sub-text">
+                    <p>Or login with</p>
+                </div>
+                <div class="icon">
+                    <img src="../img/Facebook-Logo-PNG-Clipart-Background.png" alt="" id="facebook">
+                    <img src="../img/R.png" alt="" id="google">
+                </div>
+                <div class="text-bottom">
+                    <p>Sign Up</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    $(document).ready(setInterval(function () {
+
+
+        $("#email").on('input', function () {
+            function isValidEmail(email) {
+                return email.includes("@");
+            }
+
+            if (!isValidEmail($(this).val())) {
+                $(this).css("border", "2px solid red")
+
+
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+
+            }
+        });
+        $("#password").on('input', function () {
+            if (!(/[a-zA-Z]/.test($(this).val()) && /\d/.test($(this).val()))) {
+                $(this).css("border", "2px solid red")
+
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+
+            }
+        });
+
+
+    }), 1);
+</script>
+</body>
+</html>

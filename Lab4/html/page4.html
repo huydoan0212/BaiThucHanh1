@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 4</title>
+    <link rel="stylesheet" href="../css/style4.css">
+    <script src="https://kit.fontawesome.com/3e135170bd.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="container">
+    <div id="display">
+        <div id="account">
+            <div class="text-title">
+                <p>Account</p>
+            </div>
+            <div class="row name-row">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Full Name" class="input full-name" id="name">
+            </div>
+            <div class="row email-row">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" placeholder="Email Adress" class="input email-address" id="email">
+            </div>
+            <div class="row password-row">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" placeholder="Password" class="input password" id="password">
+            </div>
+        </div>
+        <div id="date-of-birth">
+            <div class="text-title">
+                <p>Date of Birth</p>
+            </div>
+            <div class="row-dob">
+                <input type="text" placeholder="DD" class="dob date" id="date">
+                <input type="text" placeholder="MM" class="dob month" id="month">
+                <input type="text" placeholder="YYYY" class="dob year" id="year-dob">
+            </div>
+        </div>
+        <div id="gender">
+            <div class="text-title">
+                <p>Gender</p>
+            </div>
+            <div class="row-gender">
+
+                <button class="male">Male</button>
+
+                <button class="female">Female</button>
+            </div>
+        </div>
+        <div id="payment-details">
+            <div class="text-title">
+                <p>Payment Details</p>
+            </div>
+            <button class="btn credit-card-btn">
+                <i class="fa-brands fa-cc-visa"></i>
+                <span class="text-credit-btn">Credit Card</span>
+            </button>
+            <button class="btn paypal-btn">
+                <i class="fa-brands fa-cc-paypal"></i>
+                <span class="text-paypal-btn">Paypal</span>
+            </button>
+            <div class="row-card-number">
+                <i class="fa-regular fa-credit-card"></i>
+                <input type="text" placeholder="Card Number" class="card-number-input" id="cardNumber">
+            </div>
+            <div class="card-cvc">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Card CVC" class="card-cvc-input" id="cardCVC">
+            </div>
+            <div class="select-items">
+                <select name="" id="day-month" class="dmy">
+                    <option value="">01 Jan</option>
+                    <option value="">01 Feb</option>
+                    <option value="">01 Mar</option>
+
+                </select>
+                <select name="" id="year" class="dmy">
+                    <option value="">2015</option>
+                    <option value="">2014</option>
+                    <option value="">2013</option>
+                </select>
+            </div>
+        </div>
+        <div id="message">
+            <div class="text-title">
+                <p>Terms and Conditions</p>
+            </div>
+            <div class="accept">
+                <input type="checkbox" class="checkbox">
+                <p>I accept the terms and conditions for signing up to this service, and hereby confirm I have read the
+                    privacy policy</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(setInterval(function () {
+        $("#name").on('input', function () {
+            if (!(/[a-zA-Z]/.test($(this).val()) && /\d/.test($(this).val()))) {
+                $(this).css("border", "2px solid red")
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+            }
+        });
+
+        $("#email").on('input', function () {
+            function isValidEmail(email) {
+                return email.includes("@");
+            }
+
+            if (!isValidEmail($(this).val())) {
+                $(this).css("border", "2px solid red")
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+            }
+        });
+
+        $("#password").on('input', function () {
+            if (!(/[a-zA-Z]/.test($(this).val()) && /\d/.test($(this).val()))) {
+                $(this).css("border", "2px solid red")
+
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+            }
+
+        });
+
+        $("#date").on('input', function () {
+            if (!(/^\d+$/.test($(this).val()))) {
+                $(this).css("border", "2px solid red")
+
+
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+
+            }
+        });
+        $("#month").on('input', function () {
+            if (!(/^\d+$/.test($(this).val()))) {
+                $(this).css("border", "2px solid red")
+
+
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+
+            }
+        });
+        $("#year-dob").on('input', function () {
+            if (!(/^\d+$/.test($(this).val()))) {
+                $(this).css("border", "2px solid red")
+
+
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+
+            }
+        });
+        $("#cardNumber").on('input', function () {
+            if (!(/^\d+$/.test($(this).val()))) {
+                $(this).css("border", "2px solid red")
+
+
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+
+            }
+        });
+        $("#cardCVC").on('input', function () {
+            if (!(/^\d+$/.test($(this).val()))) {
+                $(this).css("border", "2px solid red")
+
+
+            } else {
+                $(this).css("border", "2px solid #f1f1f1")
+
+            }
+        });
+
+    }), 1);
+</script>
+</body>
+</html>

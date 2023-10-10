@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #button-group {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        #button-group button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="button-group">
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var buttonGroup = document.querySelector("#button-group");
+        var clickList = [];
+        for (var i = 1; i <= 64; i++) {
+            var button = document.createElement("button");
+            button.innerText = i;
+            buttonGroup.appendChild(button);
+            clickList.push(button);
+        }
+
+        var expected = 1;
+        clickList.forEach(function (button) {
+            button.addEventListener("click", function () {
+                if (parseInt(button.innerText) === expected) {
+                    buttonGroup.removeChild(this);
+                    expected++;
+                } else {
+                    alert("Nhấn sai!")
+                }
+            })
+        })
+
+    });
+</script>
+</body>
+</html>
